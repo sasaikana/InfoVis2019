@@ -15,10 +15,38 @@ Vec3.prototype.add = function(v)
 	return this;
 }
 
+// Sub method
+Vec3.prototype.sub = function(v)
+{
+        this.x -= v.x;
+        this.y -= v.y;
+        this.z -= v.z;
+        return this;
+}
+
 // Sum method
 Vec3.prototype.sum = function()
 {
 	return this.x + this.y + this.z;
+}
+
+// CrossProduct method
+Vec3.prototype.cp = function(v)
+{
+        ABx = this.y * v.z - this.z * v.y;
+	ABy = this.z * v.x - this.x * v.z;
+	ABz = this.x * v.y - this.y * v.x;
+        var AB = new Vec3(ABx,ABy,ABz);
+	return AB;
+}
+
+// Aub method
+Vec3.prototype.aub = function()
+{
+	var x2 = this.x * this.x;
+	var y2 = this.y * this.y;
+	var z2 = this.z * this.z;
+	return (Math.sqrt(x2+y2+z2))/2;
 }
 
 // Min method
@@ -85,5 +113,4 @@ Vec3.prototype.sort = function()
 		}
 	}
 	return xdn;
-}
-
+}		
