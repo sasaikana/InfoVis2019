@@ -1,0 +1,74 @@
+<html>
+        <head>
+                <title>W02: Task 01</title>
+        </head>
+        <body>
+	  <form name="num">
+	  <input type="nubmber"
+                 name="x0"
+                 value="2">
+          <input type="nubmber"
+                 name="y0"
+               	 value="2">
+          <input type="nubmber"
+                 name="z0"
+                 value="3"><br>
+          <input type="nubmber"
+                 name="x1"
+                 value="4">
+          <input type="nubmber"
+                 name="y1"
+                 value="5">
+          <input type="nubmber"
+                 name="z1"
+                 value="6"><br>
+          <input type="nubmber"
+                 name="x2"
+                 value="7">
+          <input type="nubmber"
+                 name="y2"
+                 value="8">
+          <input type="nubmber"
+                 name="z2"
+                 value="9"><br>
+	  </form>
+	  <input type="button"
+                        onclick="Event()"
+                        value="Area Calculation"/>
+		<script src="vec3.js"></script>
+		<script>
+			function Event() { 
+			var x0, y0, z0;
+	                var x1, y1, z1;
+        	        var x2, y2, z2;
+			x0 = document.num.x0.value;
+			x1 = document.num.x1.value;
+			x2 = document.num.x2.value;
+			y0 = document.num.y0.value;
+			y1 = document.num.y1.value;
+			y2 = document.num.y2.value;
+			z0 = document.num.z0.value;
+			z1 = document.num.z1.value;
+			z2 = document.num.z2.value;
+			
+                	var v0 = new Vec3( x0, y0, z0 );
+                        var v1 = new Vec3( x1, y1, z1 );
+                       	var v2 = new Vec3( x2, y2, z2 );
+			
+                       	var S = AreaOfTriangle( v0, v1, v2);
+			window.alert(S); }
+			
+			function AreaOfTriangle(x,y,z){
+			
+			var A = x.sub(z);
+			console.log(A.x);
+			var B = y.sub(z);
+			var AB = A.cp(B);
+			return AB.aub();
+			}
+		</script>
+        </body>
+</html> 
+
+
+
