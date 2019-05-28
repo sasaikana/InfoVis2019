@@ -1,5 +1,5 @@
 /**
- * @author daron1337 / http://daron1337.github.io/
+ * @author daron1337 / https://daron1337.github.io/
  */
 
 THREE.Lut = function ( colormap, numberofcolors ) {
