@@ -1,0 +1,35 @@
+html,body{
+	height:100%;
+	margin:0;
+	padding:0;
+}
+
+* {
+	box-sizing:border-box;
+}
+
+.split-box{
+	position:absolute;
+	width:50%;
+	height:100%;
+	padding:1em;
+}
+
+.top {
+	left:0;
+	background:#ffffff;
+	color:#000000;
+}
+
+.bottom {
+	right:0;
+	background:#ffffff;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
